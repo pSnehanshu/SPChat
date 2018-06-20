@@ -14,8 +14,19 @@ app.use(express.static('static'))
 //Socket
 const io = socketio(server)
 
+/**
+ * A dictionary mapping socket ids to names
+ * e.g.
+ * {
+ *    <socket.id>: <name>
+ * }
+ */
+var users = {}
+
+
 io.on('connection', function(socket){
     socket.on('joined', function(name){
+        users[socket.id] = name
         socket.broadcast.emit('joined', name)
     })
 
@@ -25,6 +36,7 @@ io.on('connection', function(socket){
     })
 
     socket.on('disconnect', function(){
-        console.log('disconnect')
+        socket.broadcast.emit('left', users[socket.id])
+        delete users[socket.id]
     })
 })

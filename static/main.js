@@ -94,10 +94,18 @@ const spchat = new Vue({
         this.socket.on('joined', name => {
             this.messages.push({
                 sender:name,
-                message: ' has joined...',
+                message: 'has joined',
                 type: 'notification'
             })
             this.scrollBottom()
+        })
+
+        this.socket.on('left', name => {
+            this.messages.push({
+                sender: name,
+                message: 'has left',
+                type: 'notification'
+            })
         })
     } 
 })
