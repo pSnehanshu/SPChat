@@ -1,0 +1,46 @@
+body{
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#spchat{
+    padding: 30px;
+    max-width: 600px;
+    border: solid 1px grey;
+}
+.msgbox{
+    clear: both;
+}
+.msgbox input{
+    padding: 5px;
+    width: 100%;
+}
+#chat-window{
+    height: 70%;
+    overflow: auto;
+    padding: 5px;
+}
+.chat{
+    padding: 5px;
+    border: solid 1px grey;
+    margin-top: 10px;
+    clear: both;
+    border-radius: 10px;
+}
+
+.chat.chat-left{
+    float: left;
+    background-color: aquamarine;
+}
+
+.chat.chat-right{
+    float: right;
+    background-color: white;
+}
+
+.chat.chat-center{
+    font-style: italic;
+    color: grey;
+    border-width: 0px;
+}
+
+

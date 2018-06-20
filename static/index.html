@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SPChat</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.min.js"></script>
+</head>
+<body>
+    <div id="spchat">
+        <h4>I'm {{name}}</h4>
+        <div id="chat-window">
+            <msg v-for="(msg, index) in messages"
+                :key="index"
+                :sender="msg.sender"
+                :text="msg.message"
+                :type="msg.type"></msg>
+        </div>
+        <div class="msgbox">
+            <msgbox @submit="sendMsg"></msgbox>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

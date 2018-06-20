@@ -1,0 +1,21 @@
+{
+  "name": "spchat",
+  "version": "1.0.0",
+  "description": "Chat with anybody.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Chat",
+    "IM",
+    "Social",
+    "SPChat"
+  ],
+  "author": "Snehanshu Phukon",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.3",
+    "socket.io": "^2.1.1"
+  }
+}
