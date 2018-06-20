@@ -10,7 +10,7 @@
 </head>
 <body>
     <div id="spchat">
-        <h4>I'm {{name}}</h4>
+        <h4>Chatting as <i>{{name}}</i>.</h4>
         <div id="chat-window">
             <msg v-for="(msg, index) in messages"
                 :key="index"
@@ -21,6 +21,9 @@
         <div class="msgbox">
             <msgbox @submit="sendMsg"></msgbox>
         </div>
+    </div>
+    <div class="footer">
+        Source code is available on <a target="_blank" href="https://github.com/pSnehanshu/SPChat">GitHub</a>.
     </div>
 
     <script src="main.js"></script>
