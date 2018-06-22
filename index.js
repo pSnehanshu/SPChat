@@ -1,11 +1,12 @@
 const express = require('express')
 const socketio = require('socket.io')
+const os = require('os')
 
 const port = process.env.PORT || 9001
 
 //Setup
 const app = express()
-const server = app.listen(port, () => console.log('SPChat running at port ' + port) )
+const server = app.listen(port, () => console.log(`SPChat is running. Point your browser to http://${os.hostname()}:${port}/`) )
 
 //Static files
 app.use(express.static('static'))
