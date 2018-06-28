@@ -16,6 +16,7 @@
   "author": "Snehanshu Phukon",
   "license": "MIT",
   "dependencies": {
+    "dotenv": "^6.0.0",
     "express": "^4.16.3",
     "socket.io": "^2.1.1"
   }
