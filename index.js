@@ -2,6 +2,8 @@ const express = require('express')
 const socketio = require('socket.io')
 const os = require('os')
 
+require('dotenv').config()
+
 const port = process.env.PORT || 9001
 
 //Setup
