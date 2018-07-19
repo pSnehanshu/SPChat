@@ -9,4 +9,4 @@ A simple chatting web app that utilizes WebSocket.
  4. run `$ npm start`
  5. Point your browser to whatever the console shows.
 ## Licensing
-Licensed under [MIT License](https://github.com/pSnehanshu/SPChat/blob/master/LICENSE).
+Licensed under [MIT License](https://raw.githubusercontent.com/pSnehanshu/SPChat/master/LICENSE).
