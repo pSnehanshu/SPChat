@@ -1,6 +1,5 @@
 const express = require('express')
 const socketio = require('socket.io')
-const os = require('os')
 
 require('dotenv').config()
 
@@ -8,7 +7,7 @@ const port = process.env.PORT || 9001
 
 //Setup
 const app = express()
-const server = app.listen(port, () => console.log(`SPChat is running. Point your browser to http://${os.hostname()}:${port}/`) )
+const server = app.listen(port, () => console.log(`SPChat is running on port ${port}`) )
 
 //Static files
 app.use(express.static('static'))
