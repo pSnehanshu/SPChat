@@ -3,7 +3,7 @@ const socketio = require('socket.io')
 
 require('dotenv').config()
 
-const port = process.env.PORT || 9001
+const port = process.env.PORTA || 9001
 
 //Setup
 const app = express()
