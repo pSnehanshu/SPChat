@@ -1,5 +1,5 @@
 ﻿# SPChat
-A simple chatting web app that utilizes WebSocket.
+A simple chatting web app that utilizes [Socket.IO](https://socket.io/).
 
 ## Installation
 
