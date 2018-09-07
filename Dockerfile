@@ -1,4 +1,4 @@
-FROM node:8
+FROM node:alpine
 WORKDIR /usr/src/app
 COPY package*.json ./
 RUN npm install --only=production
