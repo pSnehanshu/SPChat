@@ -2,7 +2,8 @@
 Vue.component('msg',{
     template:`
         <div :class="['chat', chatAlign]">
-            <span :class="['sender']">{{sender}}</span> {{message}}
+            <span class="sender">{{sender}}</span>
+            <span class="msgtxt">{{message}}</span>
         </div>
     `,
     props:['text', 'sender', 'type'],
@@ -24,7 +25,7 @@ Vue.component('msgbox',{
     template:`
         <div class="msgbox">
             <form @submit.prevent="onSubmit">
-                <input type="text" v-model="message" placeholder="Type a message...">
+                <input type="text" v-model="message" placeholder="Type a message..." autofocus>
                 <button>Send</button>
             </form>
         </div>
