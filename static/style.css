@@ -27,6 +27,7 @@ body{
     margin-top: 10px;
     clear: both;
     border-radius: 10px;
+    min-width: 50px;
 }
 
 .chat.chat-left{
@@ -49,5 +50,7 @@ body{
     font-size: 12px;
     display: block;
 }
-
-
+.footer{
+    padding: 10px;
+    font-size: 15px;
+}
