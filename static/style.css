@@ -5,7 +5,6 @@ body{
 #spchat{
     padding: 30px;
     max-width: 600px;
-    border: solid 1px grey;
 }
 .msgbox{
     clear: both;
@@ -50,4 +49,5 @@ body{
     font-size: 12px;
     display: block;
 }
+
 
