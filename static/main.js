@@ -2,7 +2,7 @@
 Vue.component('msg',{
     template:`
         <div :class="['chat', chatAlign]">
-            <b>{{sender}}</b> {{message}}
+            <span :class="['sender']">{{sender}}</span> {{message}}
         </div>
     `,
     props:['text', 'sender', 'type'],
@@ -62,9 +62,7 @@ const spchat = new Vue({
                 sender: this.name,
                 message: msg
             }
-
             this.socket.emit('send', data)
-
             data.type = 'sent'
             this.messages.push(data)
             this.scrollBottom()

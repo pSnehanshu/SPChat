@@ -14,6 +14,9 @@ body{
     padding: 5px;
     width: 100%;
 }
+.msgbox button{
+    width: 100%;
+}
 #chat-window{
     height: 70%;
     overflow: auto;
@@ -42,5 +45,9 @@ body{
     color: grey;
     border-width: 0px;
 }
-
+.sender{
+    font-weight: bold;
+    font-size: 12px;
+    display: block;
+}
 
