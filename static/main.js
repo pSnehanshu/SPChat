@@ -76,7 +76,7 @@ const spchat = new Vue({
             }, 200)
         },
         notify() {
-            
+            //
         }
     },
     mounted(){
