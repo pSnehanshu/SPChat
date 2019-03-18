@@ -74,6 +74,9 @@ const spchat = new Vue({
             setTimeout(function(){
                 chatbox.scrollTop = chatbox.scrollHeight;
             }, 200)
+        },
+        notify() {
+            
         }
     },
     mounted(){
@@ -89,6 +92,7 @@ const spchat = new Vue({
             data.type = 'received'
             this.messages.push(data)
             this.scrollBottom()
+            this.notify()
         })
 
         this.socket.on('joined', name => {
