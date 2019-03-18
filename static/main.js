@@ -75,9 +75,24 @@ const spchat = new Vue({
                 chatbox.scrollTop = chatbox.scrollHeight;
             }, 200)
         },
-        notify() {
-            //
-        }
+        notify: (function () {
+            var oldTitle = document.title
+            var timeoutId
+            var clear = function() {
+                clearInterval(timeoutId)
+                document.title = oldTitle
+                window.onmousemove = null
+                timeoutId = null
+            }
+            return function (msg = 'New message!') {
+                if (!timeoutId) {
+                    timeoutId = setInterval(function() {
+                        document.title = document.title == msg ? oldTitle : msg
+                    }, 800)
+                    window.onmousemove = clear
+                }
+            }
+        }()),
     },
     mounted(){
         do{
@@ -92,7 +107,7 @@ const spchat = new Vue({
             data.type = 'received'
             this.messages.push(data)
             this.scrollBottom()
-            this.notify()
+            this.notify(`[${data.sender} sent a message]`)
         })
 
         this.socket.on('joined', name => {
