@@ -1,6 +1,8 @@
 ﻿# SPChat
 A simple chatting web app that utilizes [Socket.IO](https://socket.io/).
 
+![SPChat screenshot](https://i0.wp.com/www.dikhow.com/wp-content/uploads/2019/05/Screenshot-from-2019-05-16-01-41-25.png)
+
 ## Installation
 
  1. Clone this repo
